@@ -1,0 +1,2 @@
+class HourlyDatum < ApplicationRecord
+end
