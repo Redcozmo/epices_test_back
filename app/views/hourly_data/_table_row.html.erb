@@ -1,0 +1,18 @@
+<table data-toggle="table">
+  <thead>
+    <tr>
+      <th>Onduleur</th>
+      <th>Date</th>
+      <th>Energie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @hourly_data.each do |hourly_datum| %>
+      <tr>
+        <td><%= hourly_datum.identifier %></td>
+        <td><%= hourly_datum.datetime %></td>
+        <td><%= hourly_datum.energy %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,2 @@
+module HourlyDataHelper
+end

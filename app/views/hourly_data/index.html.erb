@@ -1,0 +1,29 @@
+<p><%= link_to "<-- Accueil", root_path %></p>
+
+<h1>Page de prévisulation et d'importation des données CSV</h1>
+
+<%= flash[:notice] %>
+
+<div class="">
+  <h2>Visualiser</h2>
+  <%= form_tag pre_import_hourly_data_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Prévisualiser les données" %>
+  <% end %>
+</div>
+
+<div class="">
+  <h2>Importer</h2>
+  <%= form_tag import_hourly_data_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Importer le CSV" %>
+  <% end %>
+</div>
+
+<h2>Prévisualation</h2>
+
+<% if @data %>
+  <%= render "table_row_pre_import" %>
+<% else %>
+  Pas de données à prévisualiser, veuillez charger un fichier...
+<% end %>
