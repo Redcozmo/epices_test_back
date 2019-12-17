@@ -2,4 +2,9 @@
 
 <p><%= link_to "Page de prévisulation et d'importation des données CSV", hourly_data_path %></p>
 
+<h2>Statistiques</h2>
+<p>Nombre d'onduleurs : <%= @inverters.count %> </p>
+<p>Nombre de jours : <%= @daily_data.count %> </p>
+<p>Nombre de données : <%= @hourly_data.count %> </p>
+
 <%= render "table_row" %>
