@@ -19,11 +19,3 @@
     <%= submit_tag "Importer le CSV" %>
   <% end %>
 </div>
-
-<h2>Prévisualation</h2>
-
-<% if @data %>
-  <%= render "table_row_pre_import" %>
-<% else %>
-  Pas de données à prévisualiser, veuillez charger un fichier...
-<% end %>
