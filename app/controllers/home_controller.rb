@@ -1,3 +1,6 @@
 class HomeController < ApplicationController
-  def index; end
+  def index
+    @hourly_data = HourlyDatum.all
+    @daily_data = DailyDatum.all
+  end
 end

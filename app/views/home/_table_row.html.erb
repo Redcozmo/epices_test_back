@@ -1,0 +1,41 @@
+<h2>Données journalières</h2>
+
+<table data-toggle="table">
+  <thead>
+    <tr>
+      <th>Onduleur</th>
+      <th>Date</th>
+      <th>Energie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @daily_data.each do |daily_datum| %>
+      <tr>
+        <td><%= daily_datum.inverter.num %></td>
+        <td><%= daily_datum.date %></td>
+        <td><%= daily_datum.daily_energy %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<h2>Données horaires</h2>
+
+<table data-toggle="table">
+  <thead>
+    <tr>
+      <th>Onduleur</th>
+      <th>Date</th>
+      <th>Energie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @hourly_data.each do |hourly_datum| %>
+      <tr>
+        <td><%= hourly_datum.daily_datum.inverter.num %></td>
+        <td><%= hourly_datum.datetime %></td>
+        <td><%= hourly_datum.energy %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
