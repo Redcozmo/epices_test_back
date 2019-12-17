@@ -7,4 +7,13 @@
 <p>Nombre de jours : <%= @daily_data.count %> </p>
 <p>Nombre de données : <%= @hourly_data.count %> </p>
 
+
+<h2>Données selectionnées</h2>
+
+<p>Production totale :</p>
+<p>Production horaire :</p>
+
+<%= render "selected_data" %>
+
+<h2>Données journalières</h2>
 <%= render "table_row" %>
